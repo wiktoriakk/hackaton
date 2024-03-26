@@ -10,20 +10,22 @@ int main() {
     int counter = 0;
 
     do {
-        // Wyœwietlanie menu opcji
+        // WyÅ“wietlanie menu opcji
         cout << "Menu:" << endl;
         cout << "1. EGZAMIN JIPP 2023 - ZOBACZ TERAZ" << endl;
-        cout << "2. KOLOKWIA ALGEBRA Z GEOMETRI¥" << endl;
+        cout << "2. KOLOKWIA ALGEBRA Z GEOMETRIÂ¥" << endl;
         cout << "3. DYSK 1 ROK" << endl;
         cout << "4. EGZAMIN AiSD" << endl;
-        cout << "Wybierz opcjê: ";
+        cout << "Wybierz opcjÃª: ";
         cin >> choice;
 
-        // Obs³uga wyboru u¿ytkownika
+        // ObsÂ³uga wyboru uÂ¿ytkownika
         switch (choice) {
         case 1:
+            SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
             cout << "ERROR 404" << endl;
-            // Tutaj umieœæ kod dla opcji 1
+            SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_GREEN);
+            // Tutaj umieÅ“Ã¦ kod dla opcji 1
             ++counter;
             if (counter < 6) {
                 cout << "Czekam 2 sekundY przed powrotem do menu..." << endl;
@@ -36,8 +38,10 @@ int main() {
             }
             break;
         case 2:
+             SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
             cout << "DO NAUKI!" << endl;
-            // Tutaj umieœæ kod dla opcji 2
+            SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_GREEN);
+            // Tutaj umieÅ“Ã¦ kod dla opcji 2
             ++counter;
             if (counter < 6) {
                 cout << "Czekam 2 sekundY przed powrotem do menu..." << endl;
@@ -50,8 +54,10 @@ int main() {
             }
             break;
         case 3:
-            cout << "NIE MA TAK £ATWO." << endl;
-            // Tutaj umieœæ kod dla opcji 3
+             SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
+            cout << "NIE MA TAK Â£ATWO." << endl;
+            SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_GREEN);
+            // Tutaj umieÅ“Ã¦ kod dla opcji 3
             ++counter;
             if (counter < 6) {
                 cout << "Czekam 2 sekundY przed powrotem do menu..." << endl;
@@ -64,12 +70,14 @@ int main() {
             }
             break;
         case 4:
-            cout << "SPRÓBUJ PONOWNIE" << endl;
+             SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_INTENSITY);
+            cout << "SPRÃ“BUJ PONOWNIE" << endl;
+            SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_BLUE | FOREGROUND_GREEN);
             break;
         default:
-            cout << "Nieprawid³owa opcja. Spróbuj ponownie." << endl;
+            cout << "NieprawidÂ³owa opcja. SprÃ³buj ponownie." << endl;
         }
-    } while (choice != 4); // Pêtla dzia³a dopóki u¿ytkownik nie wybierze opcji "Wyjœcie"
+    } while (choice != 4); // PÃªtla dziaÂ³a dopÃ³ki uÂ¿ytkownik nie wybierze opcji "WyjÅ“cie"
 
     return 0;
 }
